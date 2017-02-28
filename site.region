@@ -33,7 +33,7 @@
       <h2 class="hug section-heading section-heading--background">
         <span>Homestyle, family-run restaurant</span>
       </h2>
-      <div class="column large--8 medium--4 about-meta">
+      <div class="column large--8 medium--4 about-meta" data-content-field="intro">
         {.section intro}
         <p>{ title }</p>
         {.end}
