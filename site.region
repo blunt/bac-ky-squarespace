@@ -1,45 +1,536 @@
 <!doctype html>
 <html>
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+  <script src="https://use.typekit.net/gdl4vqh.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-    <!-- include system scripts, page meta, and header code injection -->
-    {squarespace-headers}
-  </head>
-  <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
-
-    <div class="site-container">
-
-      <header class="site-header">
-        <!-- site navigation -->
-        <squarespace:navigation navigationId="siteNav" template="site-navigation" />
-
-        <!-- site title or logo -->
-        {.section website}
-          <h1 class="site-title-heading" data-content-field="site-title">
-            <a href="/" class="site-title-link">{siteTitle}</a>
-          </h1>
-        {.end}
-      </header>
-
-      <!-- cms content injection point -->
-      <main class="content-container" role="main" data-content-field="main-content">
-       {squarespace.main-content}
-      </main>
-
-      <!--Footer with open block field -->
-      <footer class="site-footer">
-        <squarespace:block-field id="footerBlocks" columns="12" />
-      </footer>
-
+  <!-- include system scripts, page meta, and header code injection -->
+  {squarespace-headers}
+</head>
+<body id="{squarespace.page-id}" class="{squarespace.page-classes}">
+  <header class="row" data-aos="fade" data-aos-duration="300" data-aos-delay="300">
+    <div class="column">
+      <h1 class="hug site-logo" data-content-field="site-title">
+        <a href="{fullUrl}">
+          <svg width="164" height="65" viewBox="0 0 164 65" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns"><title>Logo</title><desc>Created using Figma</desc><g style="mix-blend-mode:normal" figma:type="frame"><use xlink:href="#a" transform="translate(34.29 18.867)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#b" transform="translate(48 14.44)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#c" transform="translate(.49 5.84)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#d" transform="translate(5.34 9.005)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#e" transform="translate(82.55 5.17)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#f" transform="translate(97.8 2.042)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#g" transform="translate(108.69 25.23)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#h" transform="translate(125.97 19.21)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#i" transform="translate(72.41 23.312)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#j" transform="translate(34.29 16.704)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#k" transform="translate(48 12.88)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#l" transform="translate(.49 3.676)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#m" transform="translate(5.34 7.563)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#n" transform="translate(80.49 3.128)" fill="#E61F33" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#o" transform="translate(96.72)" fill="#E61F33" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#p" transform="translate(107.48 23.067)" fill="#E61F33" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#q" transform="translate(125.97 17.888)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/></g><defs><path id="a" d="M4.948 11.173c1.93-1.802 3.98-3.364 6.755-3.724.965-.122 1.93 0 2.895.12.603.12 1.207.36 1.81.48l.723.36c.243.12 1.087.24 1.208.36.723.72-1.086 3.845-1.57 4.686-.602 1.32-1.687 2.763-1.808 4.204-.24 1.442 1.086 1.322 2.05.6 3.5-2.282 4.705-8.048 7.962-10.57 1.69-1.203 4.946-2.284 5.67.6.12.6-.24 1.682-1.086.96-.482-.48-.24-.96-.965-1.2-2.05-.6-3.86 2.762-4.703 4.204-.965 1.562-1.57 3.244-1.93 5.046-.483 1.922-.362 4.085 2.17 3.965 2.172-.12 3.982-1.682 5.67-2.884 1.328-1.08 2.775-2.522 4.343-3.122 1.086-.48.965.24.483.96-2.05 3.004-5.67 5.767-9.047 7.21-1.93.84-3.5.72-5.067-.842-.966-.84-1.69-1.922-2.293-3.003-.844.84-1.93 1.922-3.016 2.402-1.688.72-2.653-1.802-3.135-3.003-1.81 1.2-3.016 3.124-5.067 3.844-1.688.6-4.1 1.082-5.67 0-2.05-1.32-1.326-4.084-.482-5.886.965-2.163 2.413-4.205 4.102-5.767zM9.29 0c.604 1.802 2.05 3.484 3.98 4.085 2.293.6 4.947-.24 6.395-2.043-.724 2.403-3.137 4.205-5.79 3.965C10.978 5.647 8.928 2.883 9.29 0zM3.74 21.024c.846.36 2.052-.36 2.655-.72 1.327-.84 2.654-1.923 3.74-3.004 1.93-1.802 4.463-4.445 4.584-7.208.12-2.523-3.258-1.322-4.465-.6-2.05 1.32-3.618 3.123-5.066 4.925-.966 1.32-4.102 5.286-1.45 6.607z"/><path id="b" d="M5.23 1.543c-.964.96-1.93 1.802-2.895 2.643-.603.48-1.206 1.08-1.81 1.44-.48.242-.602.242-.48-.24.12-.6.843-1.32 1.205-1.8.603-.722 1.085-1.443 1.69-2.164.36-.36.602-.84.964-1.2C4.87-.5 6.196.7 5.23 1.54z"/><path id="c" d="M8.713 46.066c-4.584 0-9.65-3.364-8.564-8.41.843-3.964 4.22-6.367 7.72-8.05 5.307-2.522 11.46-3.723 17.128-5.045 1.328-.36 2.775-.6 4.102-.84.603-.12 1.206-.24 1.69-.36.12 0 .964-.12.964-.12.12-.12-.12-.962-.24-1.082-.363-1.2-1.45-1.922-2.535-2.523-.604-.24-1.086-.48-1.69-.6-.36-.12-.603-.12-.964-.24-.604-.12-.845-.24-1.328 0-1.326.6-2.533 1.56-3.86 2.282-1.206.6-2.533 1.2-3.86 1.562-2.17.6-4.946.72-6.996-.12-1.81-.722-3.257-3.005-1.93-4.807 1.206-1.562 3.86-1.922 5.67-2.162 2.894-.36 6.03-.12 8.926.12.844.12 1.568.36 2.17 0 .725-.36 1.45-1.08 2.052-1.56 1.086-.962 2.17-2.043 3.136-3.125 1.327-1.56 3.137-4.325 1.57-6.247-1.087-1.32-3.138-1.682-4.827-2.042-5.912-.84-11.34-.72-16.768 1.682-1.81.84-2.292.84-3.98 1.922-.242.12-.725.6-.966.6-.483 0-1.327-.48-1.81-.72C7.99 3.176 10.886 1.735 16.192.533c3.74-.84 7.841-.6 11.58.12 2.534.48 5.67 1.562 6.756 4.085 1.93 4.565-3.498 9.49-6.634 12.134 3.015.84 6.03 2.763 6.273 6.247 2.05-.24 4.22-.48 6.393-.48 0 .6.24 1.68 0 2.16-.12.362-.483.242-.965.242-.845 0-1.568.12-2.413.12-.844.12-1.69.12-2.533.24-.604.12-.604 0-.725.48 0 .24-.12.6-.12.962-.362 1.32-.845 2.523-1.448 3.604-2.774 5.406-7.84 9.49-13.27 12.374-3.136 1.802-6.634 3.244-10.374 3.244zm22.8-20.183c-6.273 1.08-12.667 2.523-18.698 4.445-3.378 1.08-7.6 2.763-9.53 5.887-1.448 2.282-.965 4.925 1.448 6.487 4.825 3.124 11.7-.84 15.802-3.484 4.825-3.124 9.65-7.69 10.978-13.335zm-15.2-8.41c-.482 0-7.962-.12-5.67 2.162.845.84 3.016.72 4.102.6 2.412-.12 4.825-1.44 6.876-2.642-1.81-.12-3.497-.12-5.307-.12z"/><path id="d" d="M0 33.89c0-3.004.724-6.248 1.327-9.13 1.327-6.248 3.62-12.376 6.876-17.782.965-1.562 1.93-3.003 3.016-4.325.602-.72 2.652-3.844 3.618-2.162.12.24.362.962.362 1.322 0 .6-.845 1.202-1.327 1.682-1.207 1.322-2.292 2.643-3.257 4.085-3.62 5.165-5.91 11.172-7.48 17.3-.723 3.243-1.568 6.847-1.688 10.21"/><path id="e" d="M9.53 41.688c-.603-.36-1.086-.6-.24-1.682 3.014-4.325 15.32-21.865 17.73-26.55 1.57-3.004 1.69-6.128.484-8.17-1.207-1.922-3.498-2.883-6.876-2.883-7.84 0-17.37 7.57-19.3 9.49-.242.24-.725.12-.845.12s-.483-.6-.483-.6C.483 10.813 10.616 0 20.628 0c5.308 0 7.72 2.163 8.927 4.085 1.688 2.763 1.568 6.848-.362 10.572-2.534 4.805-14.838 22.346-17.854 26.79-.604.722-1.207.602-1.81.24z"/><path id="f" d="M22.62 44.576c-.122.48-.484.72-.966.6-3.378-1.08-6.032-5.285-8.686-9.25-1.327-2.042-2.653-4.084-4.1-5.646-.242-.24-.604-.36-.966-.12-3.257 1.682-4.705 1.682-5.67 1.44-1.085-.36-1.93-1.32-2.17-2.522-.242-1.32.24-2.643 1.326-3.363.844-.6 2.654-1.322 5.79.12.483.24.845.48 1.327.72.24.12.603.24.844 0 2.17-1.44 5.066-3.483 9.047-6.487 5.79-4.565 13.15-16.82 14.837-19.703.242-.36.603-.48.965-.24l.844.48c.362.24.482.6.24.962-1.688 3.003-9.167 15.498-15.44 20.423-3.498 2.764-6.273 4.806-8.444 6.248-.362.24-.482.72-.12 1.08 1.327 1.563 2.533 3.485 3.86 5.407 2.412 3.604 4.825 7.45 7.358 8.29.362.12.483.48.483.84l-.36.72zM3.8 27.276c-.36 0-.723.12-.965.24-.36.24-.482.722-.36 1.082-.002.12.12.48.48.6.363.12 1.207.12 3.5-1.08-.12-.12-.242-.12-.363-.24-.844-.36-1.568-.602-2.292-.602z"/><path id="g" d="M4.376 39.77c-.603 0-1.086-.12-1.568-.36-1.93-1.08-3.016-4.084-2.775-7.688C.275 29.438 1.6 21.99 10.65 18.866c3.135-1.082 6.513-1.923 10.132-2.403 1.085-2.042 2.292-4.205 3.377-6.247-3.5 3.123-7.6 5.766-10.134 4.445-.844-.48-1.326-1.202-1.568-2.043-.844-3.244 2.895-10.092 3.98-12.255.242-.36.604-.48.966-.24l.845.48c.36.24.48.6.24.962-1.086 2.042-4.222 8.53-3.74 10.332.12.36.242.48.483.6 1.568.84 7.48-3.845 12.063-8.77.362-.48 1.085-.48 1.568-.12l.482.36c.362.24.483.72.242 1.2-.965 1.803-3.378 6.368-5.91 11.054 4.462-.72 9.53-.48 14.113-.12 9.17.96 17.01 3.123 17.01 3.123l-.604 1.08c-.12.242-.36.362-.723.242-2.895-.722-19.18-4.206-31.244-1.803-1.81 3.363-3.5 6.367-4.464 7.81-3.98 6.246-9.29 13.214-13.39 13.214zm14.958-20.663c-2.774.48-5.428 1.2-7.96 2.042-7.6 2.642-8.807 8.89-8.928 10.812-.24 2.763.603 4.805 1.568 5.286 1.568.84 6.152-3.004 11.822-12.014.724-1.2 2.05-3.484 3.498-6.127z"/><path id="h" d="M6.758 6.385c-1.206-.72-2.292-1.44-3.377-2.282C2.658 3.503-.96 1.1.245.138 1.33-.702 3.5 2.54 3.984 3.262c.965.96 1.93 1.802 2.774 3.123-1.327-.72-.724-1.2 0 0z"/><path id="i" d="M8.444 12.494s-.12-.12-.24-.12c-.122 0-.122.12-.242.12l-4.584 2.403.844-5.046v-.24c-.12 0-.12-.12-.24-.12L0 5.648h5.67c0-.12.12-.24.12-.24 0-.12.12-.24.12-.24L8.083 0l2.172 5.046c0 .12.12.24.12.36s.12.24.12.24h5.549l-3.86 3.845s-.12.12-.242.12v.24l.845 5.167-4.343-2.523z"/><path id="j" d="M4.948 11.173c1.93-1.802 3.98-3.364 6.755-3.724.965-.122 1.93 0 2.895.12.603.12 1.207.36 1.81.48l.723.36c.243.12 1.087.24 1.208.36.723.72-1.086 3.845-1.57 4.686-.602 1.32-1.687 2.763-1.808 4.204-.24 1.442 1.086 1.322 2.05.6 3.5-2.282 4.705-6.847 7.962-9.37 1.69-1.2 4.946-2.282 5.67.6.12.602-.24 1.683-1.086.962-.482-.48-.24-.96-.965-1.2-2.05-.602-3.86 1.56-4.703 3.002-.965 1.562-1.57 3.244-1.93 5.046-.483 1.922-.362 4.085 2.17 3.965 2.172-.12 3.982-1.682 5.67-2.884 1.328-1.08 2.775-2.522 4.343-3.122 1.086-.48.965.24.483.96-2.05 3.004-5.67 5.767-9.047 7.21-1.93.84-3.5.72-5.067-.842-.966-.84-1.69-1.922-2.293-3.003-.844.84-1.93 1.922-3.016 2.402-1.688.72-2.653-1.802-3.135-3.003-1.81 1.2-3.016 3.124-5.067 3.844-1.688.6-4.1 1.082-5.67 0-2.05-1.32-1.326-4.084-.482-5.886.965-2.043 2.413-4.205 4.102-5.767zM9.29 0c.604 1.802 2.05 3.484 3.98 4.085 2.293.6 4.947-.24 6.395-2.043-.724 2.403-3.137 4.205-5.79 3.965C10.978 5.767 8.928 2.883 9.29 0zM3.74 21.625c.846.36 2.052-.36 2.655-.72 1.327-.842 2.654-1.923 3.74-3.004 1.93-1.8 4.463-4.444 4.584-7.208.12-2.523-3.258-1.32-4.465-.6-2.05 1.32-3.618 3.123-5.066 4.925-.966 1.442-4.102 5.287-1.45 6.608z"/><path id="k" d="M5.23 1.543c-.964.96-1.93 1.802-2.895 2.643-.603.48-1.206 1.08-1.81 1.44-.48.242-.602.242-.48-.24.12-.6.843-1.32 1.205-1.8.603-.722 1.085-1.443 1.69-2.164.36-.36.602-.84.964-1.2C4.87-.5 6.196.7 5.23 1.54z"/><path id="l" d="M8.713 46.186c-4.584 0-9.65-3.364-8.564-8.41.843-3.964 4.22-6.367 7.72-8.05 5.307-2.522 11.46-3.723 17.128-5.045 1.328-.36 2.775-.6 4.102-.84.603-.12 1.206-.24 1.69-.36.12 0 .964-.12.964-.12.12-.12-.12-.96-.24-1.082-.363-1.2-1.45-1.922-2.535-2.522-.604-.24-1.086-.48-1.69-.6-.36-.12-.603-.12-.964-.24-.604-.122-.845-.242-1.328-.002-1.326.6-2.533 1.562-3.86 2.283-1.206.6-2.533 1.202-3.86 1.562-2.17.6-4.946.72-6.996-.12-1.81-.722-3.257-3.005-1.93-4.807 1.206-1.56 3.86-1.922 5.67-2.162 2.894-.36 6.03-.12 8.926.12.844.12 1.568.36 2.17 0 .725-.36 1.45-1.08 2.052-1.56 1.086-.962 2.17-2.043 3.136-3.125 1.327-1.56 3.137-4.324 1.57-6.247-1.087-1.32-3.138-1.682-4.827-2.042-5.912-1.08-11.46-.36-17.01 2.162-1.81.84-3.62 1.803-5.428 2.884-.24.12-.724.6-.965.6-.483 0-1.327-.48-1.81-.72C6.3 4.858 10.885 1.855 16.192.532c3.74-.84 7.841-.6 11.58.12 2.534.482 5.67 1.563 6.756 4.086 1.93 4.565-3.498 9.49-6.634 12.134 3.015.84 6.03 2.763 6.273 6.247 2.05-.24 4.22-.48 6.393-.48 0 .6.24 1.68 0 2.16-.12.362-.483.242-.965.242-.845 0-1.568.12-2.413.12-.844.12-1.69.12-2.533.24-.604.12-.604 0-.725.48 0 .36-.12.72-.12 1.082-.362 1.32-.845 2.523-1.448 3.604-2.774 5.406-7.84 9.49-13.27 12.374-3.136 1.682-6.634 3.244-10.374 3.244zm22.8-20.303c-6.273 1.08-12.667 2.523-18.698 4.445-3.378 1.08-7.6 2.763-9.53 5.887-1.448 2.282-.965 4.925 1.448 6.487 4.825 3.124 11.7-.84 15.802-3.484 4.825-3.004 9.65-7.57 10.978-13.335zm-15.2-7.81c-.482 0-7.962-.12-5.67 2.163.845.84 3.016.72 4.102.6 2.412-.12 4.825-1.44 6.876-2.642-1.81 0-3.497-.12-5.307-.12z"/><path id="m" d="M0 33.89c0-3.004.724-6.248 1.327-9.13 1.327-6.248 3.62-12.376 6.876-17.782.965-1.562 1.93-3.003 3.016-4.325.602-.72 2.652-3.844 3.618-2.162.12.24.362.962.362 1.322 0 .6-.845 1.202-1.327 1.682-1.207 1.322-2.292 2.643-3.257 4.085-3.62 5.165-5.91 11.172-7.48 17.3-.844 3.243-1.688 6.847-1.688 10.33"/><path id="n" d="M10.374 41.688c-.603-.36-1.085-.6-.24-1.682 3.015-4.325 15.32-21.865 17.732-26.55 1.568-3.004 1.69-6.128.482-8.17-1.206-1.922-3.498-2.883-6.876-2.883-7.84 0-17.37 9.37-19.3 11.293-.242.24-.483.36-.845.36H0C.483 13.456 11.58 0 21.472 0c5.308 0 7.72 2.163 8.927 4.085 1.688 2.763 1.567 6.848-.363 10.572-2.533 4.805-14.837 22.346-17.853 26.79-.603.722-1.207.602-1.81.24z"/><path id="o" d="M22.498 44.576c-.12.48-.482.72-.965.6-3.378-1.08-6.03-5.285-8.685-9.25-1.327-2.042-2.654-4.084-3.98-5.646-.242-.24-.604-.36-.966-.12-3.257 1.682-4.705 1.682-5.67 1.44-1.085-.36-1.93-1.32-2.17-2.522-.242-1.32.24-2.643 1.326-3.363.844-.6 2.654-1.322 5.79.12.483.24.845.48 1.327.72.24.12.603.24.844 0 2.17-1.44 5.066-3.483 9.047-6.487 5.79-4.565 13.15-16.82 14.837-19.703.242-.36.603-.48.965-.24l.844.48c.362.24.482.6.24.962-1.688 3.003-9.167 15.498-15.44 20.423-3.498 2.764-6.273 4.806-8.444 6.248-.362.24-.482.72-.12 1.08 1.327 1.563 2.533 3.485 3.86 5.407 2.412 3.604 4.825 7.45 7.358 8.29.362.12.483.48.483.84l-.482.72zM3.68 27.276c-.362 0-.724.12-.965.24-.362.24-.483.722-.362 1.082 0 .12.12.48.482.6s1.207.12 3.5-1.08c-.122-.12-.243-.12-.363-.24-.845-.36-1.568-.602-2.292-.602z"/><path id="p" d="M4.376 39.77c-.603 0-1.086-.12-1.568-.36-1.93-1.08-3.016-4.084-2.775-7.688C.275 29.438 1.6 21.99 10.65 18.866c3.135-1.082 6.513-1.923 10.132-2.403 1.085-2.042 2.292-4.205 3.377-6.247-3.5 3.123-7.6 5.766-10.134 4.445-.844-.48-1.326-1.202-1.568-2.043-.844-3.244 2.895-10.092 3.98-12.255.242-.36.604-.48.966-.24l.845.48c.36.24.48.6.24.962-1.086 2.042-4.222 8.53-3.74 10.332.12.36.242.48.483.6 1.568.84 7.48-3.845 12.063-8.77.362-.48 1.085-.48 1.568-.12l.482.36c.362.24.483.72.242 1.2-.965 1.803-3.378 6.368-5.91 11.054 4.462-.72 9.53-.48 14.113-.12 9.17.96 17.01 3.123 17.01 3.123l-.604 1.08c-.12.242-.36.362-.723.242-2.895-.722-19.18-4.206-31.244-1.803-1.81 3.363-3.5 6.367-4.464 7.81-3.98 6.246-9.29 13.214-13.39 13.214zm14.958-20.663c-2.774.48-5.428 1.2-7.96 2.042-7.6 2.642-8.807 8.89-8.928 10.812-.24 2.763.603 4.805 1.568 5.286 1.568.84 6.152-3.004 11.822-12.014.724-1.2 2.05-3.484 3.498-6.127z"/><path id="q" d="M6.758 6.746c-1.206-.72-2.292-1.682-3.377-2.643C2.658 3.503-.96 1.1.245.138 1.33-.702 3.5 2.54 3.984 3.262c.965 1.08 1.93 2.282 2.774 3.484-1.327-.72-.724-1.202 0 0z"/></defs></svg>
+          {siteTitle}
+        </a>
+      </h1>
+      <squarespace:navigation navigationId="siteNav" template="site-navigation" />
     </div>
+  </header>
 
-    <!-- combo and minify scripts when not logged in -->
-    <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+  <!-- {squarespace.main-content} -->
 
-    <!-- other scripts, and footer code injection -->
-    {squarespace-footers}
+  <section class="row about" role="main" data-content-field="main-content">
+    <div class="column large--14 medium--6 about-slider" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="300">
+      <div class="about-slider-slide"></div>
+    </div>
+    <div class="column large--9 medium--7 small--6 about-heading" data-aos="fade" data-aos-duration="300" data-aos-delay="300">
+      <h2 class="hug section-heading section-heading--background">
+        <span>Homestyle, family-run restaurant</span>
+      </h2>
+      <div class="column large--8 medium--4 about-meta">
+        <p>Located in Toronto's trendy King West neighborhood</p>
+        <svg width="29" height="28" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+          <title>Vector</title>
+          <desc>Created using Figma</desc>
+          <g id="Canvas" transform="translate(-6619 -73)" figma:type="canvas">
+            <g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+              <use xlink:href="#path0_fill" transform="translate(6619 73.6134)" fill="#FEE000" style="mix-blend-mode:normal;"/>
+            </g>
+          </g>
+          <defs>
+            <path id="path0_fill" d="M 15.1787 22.6822C 15.1787 22.6822 14.9619 22.4641 14.7451 22.4641C 14.5282 22.4641 14.5282 22.6822 14.3114 22.6822L 6.0715 27.0442L 7.58937 17.8841C 7.58937 17.8841 7.58937 17.666 7.58937 17.4479C 7.37253 17.4479 7.37253 17.2298 7.1557 17.2298L -3.3087e-06 10.2506L 7.37253 10.2506C 7.58937 10.2506 8.02305 10.2506 8.45673 10.2506C 8.89041 10.2506 9.32408 10.2506 9.75776 10.2506C 9.75776 10.2506 9.97461 10.2506 10.1914 10.2506C 10.1914 10.0325 10.4083 9.81442 10.4083 9.81442C 10.4083 9.59632 10.6251 9.37822 10.6251 9.37822L 14.5282 0L 18.4313 9.16013C 18.4313 9.37823 18.6482 9.59632 18.6482 9.81442C 18.6482 10.0325 18.865 10.2506 18.865 10.2506L 19.0818 10.2506C 19.5155 10.2506 19.9492 10.2506 20.3829 10.2506C 20.8166 10.2506 21.0334 10.2506 21.2502 10.2506L 28.8396 10.2506L 21.9007 17.2298C 21.9007 17.2298 21.6839 17.4479 21.4671 17.4479C 21.4671 17.666 21.4671 17.666 21.4671 17.8841L 22.9849 27.2623L 15.1787 22.6822Z"/>
+          </defs>
+        </svg>
+        <ul class="about-hours">
+          <li><strong>M - F</strong> – 11AM to 10PM</li>
+          <li><strong>Sat</strong> – 12PM to 10PM</li>
+          <li><strong>Sun</strong> – 12PM to 7PM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  </body>
+  <section class="row menu">
+    <h2 class="section-heading menu-heading">Menu</h2>
+    <div class="column large--12 offset--6 medium--6 medium-offset--3 menu-heading">
+      <h3 class="menu-section-heading"><span>Starters</span></h3>
+    </div>
+    <div class="column large--6 no-gutter image-column">
+      <div class="column large--16 offset--2 medium--6 medium-offset--3 small--4 small-offset--2 image-1">
+        <img src="{fullUrl}/img/fresh-rolls.jpg" alt="">
+      </div>
+      <div class="column large--16 medium--6 small--4 image-2">
+        <img src="{fullUrl}/img/spring-rolls.jpg" alt="">
+      </div>
+    </div>
+    <div class="section column large--12 no-gutter">
+      <div class="column menu-inner-section">
+        <h4 class="inner-section-heading hug">Fresh Rolls & Spring Rolls</h4>
+      </div>
+      <div class="column large--9 medium-half--1 menu-inner-section">
+        <ul class="menu-items">
+          <li class="menu-item">
+            <strong>Pork fresh rolls</strong>
+            <span>$5</span>
+            <p class="hug">Grilled pork, vermicelli, lettuce brean sprouts, cucumber, carrots, mint leaves, wrapped with rice paper</p>
+          </li>
+          <li class="menu-item">
+            <strong>Shrimp fresh rolls</strong>
+            <span>$5</span>
+            <p class="hug">Shrimp, rice paper, vermicelli, lettuce, bean sprouts, cucumber, carrots, and mint leaves</p>
+          </li>
+          <li class="menu-item">
+            <strong>Avocado fresh rolls</strong>
+            <span>$10.80</span>
+            <p class="hug">Avocado, rice paper, vermicelli, lettuce, bean sprouts, cucumber, carrots, and mint leaves</p>
+          </li>
+        </ul>
+      </div>
+      <div class="column large--9 medium-half--1 menu-inner-section">
+        <ul class="menu-items">
+          <li class="menu-item">
+            <strong>Homestyle spring rolls</strong>
+            <span>$4.50</span>
+            <p class="hug">Pork, taro, jicama, onion, and mung bean noodles</p>
+          </li>
+          <li class="menu-item">
+            <strong>Vegetarian spring rolls</strong>
+            <span>$4.50</span>
+            <p class="hug">Cabbage, jicama, taro, onions, and mung bean noodles</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section column large--12 offset--6 no-gutter">
+      <div class="column menu-inner-section">
+        <h4 class="inner-section-heading hug">Salads</h4>
+      </div>
+      <div class="column large--9 medium-half--1">
+        <ul class="menu-items">
+          <li class="menu-item">
+            <strong>House special salad slaw</strong>
+            <span>$6</span>
+            <p class="hug">Cabbage, shredded carrots, sweet onions, daikon, lime juice, fried onions, shrimp chips, basil, and mint leaves</p>
+          </li>
+        </ul>
+      </div>
+      <div class="column large--9 medium-half--1">
+        <ul class="menu-items">
+          <li class="menu-item">
+            <strong>Mango Salad</strong>
+            <span>$6</span>
+            <p class="hug">Fresh mango, peppers, shrimp chips, and peanuts</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="column large--12 offset--6 menu-heading mains">
+      <h3 class="menu-section-heading"><span>Mains</span></h3>
+    </div>
+    <div class="column large--6 no-gutter image-column">
+      <div class="column large--16 offset--1 medium--6 image-3 small--4">
+        <img src="img/image-2.jpg" alt="">
+      </div>
+      <div class="column large--16 offset--2 medium--6 medium-offset--3 small--4 small-offset--2 image-4">
+        <img src="img/image.jpg" alt="">
+      </div>
+    </div>
+    <div class="section column large--12 no-gutter">
+      <div class="section column large--9 medium-half--1 menu-inner-section">
+        <h4 class="inner-section-heading hug">Bun - Vermicelli</h4>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <strong>Bun rieu</strong>
+            <span>$8.80</span>
+            <p class="hug">Vermicelli noodles, chicken soup broth, fresh tomatoes, dried tofu, crab meat balls made with ground pork, egg, and crab paste</p>
+          </li>
+          <li class="menu-item">
+            <strong>Bun with pork slice</strong>
+            <span>$10.80</span>
+            <p class="hug">Vermicelli noodles, spring rools, pickled carrots/daikon, salad, and a side of fish sauce (Can subsitute with checken or beef)</p>
+          </li>
+          <li class="menu-item">
+            <strong>Bun with mixed vegetables and tofu</strong>
+            <span>$10.80</span>
+            <p class="hug">Vermicelli noodles, vegetarian spring roll, mixed vegetables, deep fried tofu, pickled carrots/daikon, and a side of fish sauce. (Vegan fish sauce available)</p>
+          </li>
+        </ul>
+      </div>
+      <div class="column large--9  medium-half--1 menu-inner-section">
+        <h4 class="inner-section-heading hug">Pho' Rice Noodles</h4>
+        <ul class="menu-items">
+          <li class="menu-item">
+            <strong>Pho' tai nam bo vien</strong>
+            <span>sm $7.00 lg $9.90</span>
+            <p class="hug">Rice noodle soup with rare beef, beef flank, and beef balls</p>
+          </li>
+          <li class="menu-item">
+            <strong>Pho' ga</strong>
+            <span>sm $7.00 lg $9.90</span>
+            <p class="hug">Rice noodle soup with chicken slices and chicken broth</p>
+          </li>
+          <li class="menu-item">
+            <strong>Pho' vegetarian</strong>
+            <span>sm $7.00 lg $9.90</span>
+            <p class="hug">Rice noodles, mushroom broth, and a variety of vegetables</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section column large--12 offset--6 no-gutter">
+      <div class="column menu-inner-section">
+        <h4 class="inner-section-heading hug">Co’m dac biet – Rice</h4>
+      </div>
+      <div class="column large--9 medium-half--1">
+        <ul class="menu-items">
+          <li class="menu-item no-min">
+            <strong>Rice with pork chop, fried egg, and house salad</strong>
+            <span>$10.80</span>
+            <p class="hug">(Can substitute with chicken or beef)</p>
+          </li>
+        </ul>
+      </div>
+      <div class="column large--9 medium-half--1">
+        <ul class="menu-items">
+          <li class="menu-item no-min">
+            <strong>Rice with mixed vegetables, fried egg and house salad</strong>
+            <span>$10.80</span>
+            <p class="hug">Broccoli, cauliflower, bok choy, mushroom, and tofu</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="column large--12 offset--6 menu-heading drinks">
+      <h3 class="menu-section-heading"><span>Drinks</span></h3>
+    </div>
+    <div class="column large--6 no-gutter image-column last-image">
+      <div class="column large--14 offset--1 image-5">
+        <img src="img/backy.jpg" alt="">
+      </div>
+    </div>
+    <div class="section column large--12 offset--6 no-gutter">
+      <div class="column large--9 medium-half--1">
+        <ul class="menu-items hug">
+          <li class="menu-item hug">
+            <strong>Coconut Water</strong>
+            <span>$3.20</span>
+          </li>
+          <li class="menu-item hug">
+            <strong>Mango Juice</strong>
+            <span>$3.20</span>
+          </li>
+          <li class="menu-item hug">
+            <strong>Sparkling Water</strong>
+            <span>$2.20</span>
+          </li>
+          <li class="menu-item hug">
+            <strong>Tea (green tea or earl grey)</strong>
+            <span>$3.20</span>
+          </li>
+          <li class="menu-item hug">
+            <strong>Vietnamese jackfruit shake</strong>
+            <span>$2.20</span>
+          </li>
+        </ul>
+      </div>
+      <div class="column large--9 medium-half--1">
+        <ul class="menu-items hug">
+          <li class="menu-item hug">
+            <strong>Natural Spring Water</strong>
+            <span>$1.50</span>
+          </li>
+          <li class="menu-item hug">
+            <strong>Coke / Diet Coke</strong>
+            <span>$1.50</span>
+          </li>
+          <li class="menu-item hug">
+            <strong>Vietnamese coffee (hot or iced)</strong>
+            <span>$3.20</span>
+          </li>
+          <li class="menu-item hug">
+            <strong>Vietnamese avacado shake</strong>
+            <span>$1.50</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="row location">
+    <h2 class="section-heading hug"><span>Contact</span></h2>
+    <div class="column no-gutter">
+      <div class="address column large--3 medium-half--1 small--3">
+        <h4 class="inner-section-heading hug">Address</h4>
+        <p>567 King Street West</p>
+        <p class="hug">Toronto, Ontario</p>
+        <p class="hug">M5V 1M1</p>
+        <p class="hug">416-599-PHO8 (7468)</p>
+        <a href="https://www.instagram.com/backypho/" target="_blank" class="social-icon icon-instagram"></a>
+        <a href="https://twitter.com/backypho" target="_blank" class="social-icon icon-twitter"></a>
+        <a href="mailto:info@backy.ca" class="social-icon icon-envelope"></a>
+      </div>
+      <div class="column large--3 medium-half--1 small--3">
+        <h4 class="inner-section-heading hug">Hours</h4>
+        <ul class="about-hours">
+          <li><strong>M - F</strong> – 11AM to 10PM</li>
+          <li><strong>Sat</strong> – 12PM to 10PM</li>
+          <li><strong>Sun</strong> – 12PM to 7PM</li>
+        </ul>
+      </div>
+      <div class="column large--12 map">
+        <div id="map"></div>
+        <script>
+        function initMap() {
+          var backy = {lat: 43.6444276, lng: -79.3994346};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            scrollwheel: false,
+            styles: [
+              {
+                "featureType": "all",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#ffffff"
+                  }
+                ]
+              },
+              {
+                "featureType": "all",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "all",
+                "elementType": "labels.icon",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#c9323b"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "color": "#c9323b"
+                  },
+                  {
+                    "weight": 1.2
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative.locality",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "lightness": "-1"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative.neighborhood",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "lightness": "0"
+                  },
+                  {
+                    "saturation": "0"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative.neighborhood",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "weight": "0.01"
+                  }
+                ]
+              },
+              {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "weight": "0"
+                  }
+                ]
+              },
+              {
+                "featureType": "landscape",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#e71d32"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#99282f"
+                  }
+                ]
+              },
+              {
+                "featureType": "road",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [
+                  {
+                    "color": "#fee000"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.highway.controlled_access",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                  {
+                    "color": "#99282f"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#b01425"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.local",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#ffffff"
+                  }
+                ]
+              },
+              {
+                "featureType": "road.local",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+              },
+              {
+                "featureType": "transit",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#99282f"
+                  }
+                ]
+              },
+              {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#000000"
+                  }
+                ]
+              }
+            ],
+            center: backy,
+            disableDefaultUI: true
+          });
+          var image = new google.maps.MarkerImage('img/star.svg',
+          new google.maps.Size(49, 47),
+          new google.maps.Point(0, 0),
+          new google.maps.Point(24.5, 23.5));
+          var marker = new google.maps.Marker({
+            position: backy,
+            map: map,
+            icon: image
+          });
+          google.maps.event.addDomListener(window, 'resize', function() {
+            map.setCenter(backy);
+          });
+        }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXBHmnVScym9gbFQYQl28FqbxM7d2Ks6I&callback=initMap"></script>
+      </div>
+    </div>
+  </section>
+  <footer class="row">
+    <div class="column">
+      <span>Copyright 2016 – Bắc Kỳ Vietnamese Canteen</span>
+      <div class="hug site-logo">
+        <a href="/">
+          <svg width="164" height="65" viewBox="0 0 164 65" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns"><title>Logo</title><desc>Created using Figma</desc><g style="mix-blend-mode:normal" figma:type="frame"><use xlink:href="#a" transform="translate(34.29 18.867)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#b" transform="translate(48 14.44)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#c" transform="translate(.49 5.84)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#d" transform="translate(5.34 9.005)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#e" transform="translate(82.55 5.17)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#f" transform="translate(97.8 2.042)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#g" transform="translate(108.69 25.23)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#h" transform="translate(125.97 19.21)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#i" transform="translate(72.41 23.312)" fill="#FEE000" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#j" transform="translate(34.29 16.704)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#k" transform="translate(48 12.88)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#l" transform="translate(.49 3.676)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#m" transform="translate(5.34 7.563)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#n" transform="translate(80.49 3.128)" fill="#E61F33" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#o" transform="translate(96.72)" fill="#E61F33" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#p" transform="translate(107.48 23.067)" fill="#E61F33" style="mix-blend-mode:normal" figma:type="vector"/><use xlink:href="#q" transform="translate(125.97 17.888)" fill="#E71D32" style="mix-blend-mode:normal" figma:type="vector"/></g><defs><path id="a" d="M4.948 11.173c1.93-1.802 3.98-3.364 6.755-3.724.965-.122 1.93 0 2.895.12.603.12 1.207.36 1.81.48l.723.36c.243.12 1.087.24 1.208.36.723.72-1.086 3.845-1.57 4.686-.602 1.32-1.687 2.763-1.808 4.204-.24 1.442 1.086 1.322 2.05.6 3.5-2.282 4.705-8.048 7.962-10.57 1.69-1.203 4.946-2.284 5.67.6.12.6-.24 1.682-1.086.96-.482-.48-.24-.96-.965-1.2-2.05-.6-3.86 2.762-4.703 4.204-.965 1.562-1.57 3.244-1.93 5.046-.483 1.922-.362 4.085 2.17 3.965 2.172-.12 3.982-1.682 5.67-2.884 1.328-1.08 2.775-2.522 4.343-3.122 1.086-.48.965.24.483.96-2.05 3.004-5.67 5.767-9.047 7.21-1.93.84-3.5.72-5.067-.842-.966-.84-1.69-1.922-2.293-3.003-.844.84-1.93 1.922-3.016 2.402-1.688.72-2.653-1.802-3.135-3.003-1.81 1.2-3.016 3.124-5.067 3.844-1.688.6-4.1 1.082-5.67 0-2.05-1.32-1.326-4.084-.482-5.886.965-2.163 2.413-4.205 4.102-5.767zM9.29 0c.604 1.802 2.05 3.484 3.98 4.085 2.293.6 4.947-.24 6.395-2.043-.724 2.403-3.137 4.205-5.79 3.965C10.978 5.647 8.928 2.883 9.29 0zM3.74 21.024c.846.36 2.052-.36 2.655-.72 1.327-.84 2.654-1.923 3.74-3.004 1.93-1.802 4.463-4.445 4.584-7.208.12-2.523-3.258-1.322-4.465-.6-2.05 1.32-3.618 3.123-5.066 4.925-.966 1.32-4.102 5.286-1.45 6.607z"/><path id="b" d="M5.23 1.543c-.964.96-1.93 1.802-2.895 2.643-.603.48-1.206 1.08-1.81 1.44-.48.242-.602.242-.48-.24.12-.6.843-1.32 1.205-1.8.603-.722 1.085-1.443 1.69-2.164.36-.36.602-.84.964-1.2C4.87-.5 6.196.7 5.23 1.54z"/><path id="c" d="M8.713 46.066c-4.584 0-9.65-3.364-8.564-8.41.843-3.964 4.22-6.367 7.72-8.05 5.307-2.522 11.46-3.723 17.128-5.045 1.328-.36 2.775-.6 4.102-.84.603-.12 1.206-.24 1.69-.36.12 0 .964-.12.964-.12.12-.12-.12-.962-.24-1.082-.363-1.2-1.45-1.922-2.535-2.523-.604-.24-1.086-.48-1.69-.6-.36-.12-.603-.12-.964-.24-.604-.12-.845-.24-1.328 0-1.326.6-2.533 1.56-3.86 2.282-1.206.6-2.533 1.2-3.86 1.562-2.17.6-4.946.72-6.996-.12-1.81-.722-3.257-3.005-1.93-4.807 1.206-1.562 3.86-1.922 5.67-2.162 2.894-.36 6.03-.12 8.926.12.844.12 1.568.36 2.17 0 .725-.36 1.45-1.08 2.052-1.56 1.086-.962 2.17-2.043 3.136-3.125 1.327-1.56 3.137-4.325 1.57-6.247-1.087-1.32-3.138-1.682-4.827-2.042-5.912-.84-11.34-.72-16.768 1.682-1.81.84-2.292.84-3.98 1.922-.242.12-.725.6-.966.6-.483 0-1.327-.48-1.81-.72C7.99 3.176 10.886 1.735 16.192.533c3.74-.84 7.841-.6 11.58.12 2.534.48 5.67 1.562 6.756 4.085 1.93 4.565-3.498 9.49-6.634 12.134 3.015.84 6.03 2.763 6.273 6.247 2.05-.24 4.22-.48 6.393-.48 0 .6.24 1.68 0 2.16-.12.362-.483.242-.965.242-.845 0-1.568.12-2.413.12-.844.12-1.69.12-2.533.24-.604.12-.604 0-.725.48 0 .24-.12.6-.12.962-.362 1.32-.845 2.523-1.448 3.604-2.774 5.406-7.84 9.49-13.27 12.374-3.136 1.802-6.634 3.244-10.374 3.244zm22.8-20.183c-6.273 1.08-12.667 2.523-18.698 4.445-3.378 1.08-7.6 2.763-9.53 5.887-1.448 2.282-.965 4.925 1.448 6.487 4.825 3.124 11.7-.84 15.802-3.484 4.825-3.124 9.65-7.69 10.978-13.335zm-15.2-8.41c-.482 0-7.962-.12-5.67 2.162.845.84 3.016.72 4.102.6 2.412-.12 4.825-1.44 6.876-2.642-1.81-.12-3.497-.12-5.307-.12z"/><path id="d" d="M0 33.89c0-3.004.724-6.248 1.327-9.13 1.327-6.248 3.62-12.376 6.876-17.782.965-1.562 1.93-3.003 3.016-4.325.602-.72 2.652-3.844 3.618-2.162.12.24.362.962.362 1.322 0 .6-.845 1.202-1.327 1.682-1.207 1.322-2.292 2.643-3.257 4.085-3.62 5.165-5.91 11.172-7.48 17.3-.723 3.243-1.568 6.847-1.688 10.21"/><path id="e" d="M9.53 41.688c-.603-.36-1.086-.6-.24-1.682 3.014-4.325 15.32-21.865 17.73-26.55 1.57-3.004 1.69-6.128.484-8.17-1.207-1.922-3.498-2.883-6.876-2.883-7.84 0-17.37 7.57-19.3 9.49-.242.24-.725.12-.845.12s-.483-.6-.483-.6C.483 10.813 10.616 0 20.628 0c5.308 0 7.72 2.163 8.927 4.085 1.688 2.763 1.568 6.848-.362 10.572-2.534 4.805-14.838 22.346-17.854 26.79-.604.722-1.207.602-1.81.24z"/><path id="f" d="M22.62 44.576c-.122.48-.484.72-.966.6-3.378-1.08-6.032-5.285-8.686-9.25-1.327-2.042-2.653-4.084-4.1-5.646-.242-.24-.604-.36-.966-.12-3.257 1.682-4.705 1.682-5.67 1.44-1.085-.36-1.93-1.32-2.17-2.522-.242-1.32.24-2.643 1.326-3.363.844-.6 2.654-1.322 5.79.12.483.24.845.48 1.327.72.24.12.603.24.844 0 2.17-1.44 5.066-3.483 9.047-6.487 5.79-4.565 13.15-16.82 14.837-19.703.242-.36.603-.48.965-.24l.844.48c.362.24.482.6.24.962-1.688 3.003-9.167 15.498-15.44 20.423-3.498 2.764-6.273 4.806-8.444 6.248-.362.24-.482.72-.12 1.08 1.327 1.563 2.533 3.485 3.86 5.407 2.412 3.604 4.825 7.45 7.358 8.29.362.12.483.48.483.84l-.36.72zM3.8 27.276c-.36 0-.723.12-.965.24-.36.24-.482.722-.36 1.082-.002.12.12.48.48.6.363.12 1.207.12 3.5-1.08-.12-.12-.242-.12-.363-.24-.844-.36-1.568-.602-2.292-.602z"/><path id="g" d="M4.376 39.77c-.603 0-1.086-.12-1.568-.36-1.93-1.08-3.016-4.084-2.775-7.688C.275 29.438 1.6 21.99 10.65 18.866c3.135-1.082 6.513-1.923 10.132-2.403 1.085-2.042 2.292-4.205 3.377-6.247-3.5 3.123-7.6 5.766-10.134 4.445-.844-.48-1.326-1.202-1.568-2.043-.844-3.244 2.895-10.092 3.98-12.255.242-.36.604-.48.966-.24l.845.48c.36.24.48.6.24.962-1.086 2.042-4.222 8.53-3.74 10.332.12.36.242.48.483.6 1.568.84 7.48-3.845 12.063-8.77.362-.48 1.085-.48 1.568-.12l.482.36c.362.24.483.72.242 1.2-.965 1.803-3.378 6.368-5.91 11.054 4.462-.72 9.53-.48 14.113-.12 9.17.96 17.01 3.123 17.01 3.123l-.604 1.08c-.12.242-.36.362-.723.242-2.895-.722-19.18-4.206-31.244-1.803-1.81 3.363-3.5 6.367-4.464 7.81-3.98 6.246-9.29 13.214-13.39 13.214zm14.958-20.663c-2.774.48-5.428 1.2-7.96 2.042-7.6 2.642-8.807 8.89-8.928 10.812-.24 2.763.603 4.805 1.568 5.286 1.568.84 6.152-3.004 11.822-12.014.724-1.2 2.05-3.484 3.498-6.127z"/><path id="h" d="M6.758 6.385c-1.206-.72-2.292-1.44-3.377-2.282C2.658 3.503-.96 1.1.245.138 1.33-.702 3.5 2.54 3.984 3.262c.965.96 1.93 1.802 2.774 3.123-1.327-.72-.724-1.2 0 0z"/><path id="i" d="M8.444 12.494s-.12-.12-.24-.12c-.122 0-.122.12-.242.12l-4.584 2.403.844-5.046v-.24c-.12 0-.12-.12-.24-.12L0 5.648h5.67c0-.12.12-.24.12-.24 0-.12.12-.24.12-.24L8.083 0l2.172 5.046c0 .12.12.24.12.36s.12.24.12.24h5.549l-3.86 3.845s-.12.12-.242.12v.24l.845 5.167-4.343-2.523z"/><path id="j" d="M4.948 11.173c1.93-1.802 3.98-3.364 6.755-3.724.965-.122 1.93 0 2.895.12.603.12 1.207.36 1.81.48l.723.36c.243.12 1.087.24 1.208.36.723.72-1.086 3.845-1.57 4.686-.602 1.32-1.687 2.763-1.808 4.204-.24 1.442 1.086 1.322 2.05.6 3.5-2.282 4.705-6.847 7.962-9.37 1.69-1.2 4.946-2.282 5.67.6.12.602-.24 1.683-1.086.962-.482-.48-.24-.96-.965-1.2-2.05-.602-3.86 1.56-4.703 3.002-.965 1.562-1.57 3.244-1.93 5.046-.483 1.922-.362 4.085 2.17 3.965 2.172-.12 3.982-1.682 5.67-2.884 1.328-1.08 2.775-2.522 4.343-3.122 1.086-.48.965.24.483.96-2.05 3.004-5.67 5.767-9.047 7.21-1.93.84-3.5.72-5.067-.842-.966-.84-1.69-1.922-2.293-3.003-.844.84-1.93 1.922-3.016 2.402-1.688.72-2.653-1.802-3.135-3.003-1.81 1.2-3.016 3.124-5.067 3.844-1.688.6-4.1 1.082-5.67 0-2.05-1.32-1.326-4.084-.482-5.886.965-2.043 2.413-4.205 4.102-5.767zM9.29 0c.604 1.802 2.05 3.484 3.98 4.085 2.293.6 4.947-.24 6.395-2.043-.724 2.403-3.137 4.205-5.79 3.965C10.978 5.767 8.928 2.883 9.29 0zM3.74 21.625c.846.36 2.052-.36 2.655-.72 1.327-.842 2.654-1.923 3.74-3.004 1.93-1.8 4.463-4.444 4.584-7.208.12-2.523-3.258-1.32-4.465-.6-2.05 1.32-3.618 3.123-5.066 4.925-.966 1.442-4.102 5.287-1.45 6.608z"/><path id="k" d="M5.23 1.543c-.964.96-1.93 1.802-2.895 2.643-.603.48-1.206 1.08-1.81 1.44-.48.242-.602.242-.48-.24.12-.6.843-1.32 1.205-1.8.603-.722 1.085-1.443 1.69-2.164.36-.36.602-.84.964-1.2C4.87-.5 6.196.7 5.23 1.54z"/><path id="l" d="M8.713 46.186c-4.584 0-9.65-3.364-8.564-8.41.843-3.964 4.22-6.367 7.72-8.05 5.307-2.522 11.46-3.723 17.128-5.045 1.328-.36 2.775-.6 4.102-.84.603-.12 1.206-.24 1.69-.36.12 0 .964-.12.964-.12.12-.12-.12-.96-.24-1.082-.363-1.2-1.45-1.922-2.535-2.522-.604-.24-1.086-.48-1.69-.6-.36-.12-.603-.12-.964-.24-.604-.122-.845-.242-1.328-.002-1.326.6-2.533 1.562-3.86 2.283-1.206.6-2.533 1.202-3.86 1.562-2.17.6-4.946.72-6.996-.12-1.81-.722-3.257-3.005-1.93-4.807 1.206-1.56 3.86-1.922 5.67-2.162 2.894-.36 6.03-.12 8.926.12.844.12 1.568.36 2.17 0 .725-.36 1.45-1.08 2.052-1.56 1.086-.962 2.17-2.043 3.136-3.125 1.327-1.56 3.137-4.324 1.57-6.247-1.087-1.32-3.138-1.682-4.827-2.042-5.912-1.08-11.46-.36-17.01 2.162-1.81.84-3.62 1.803-5.428 2.884-.24.12-.724.6-.965.6-.483 0-1.327-.48-1.81-.72C6.3 4.858 10.885 1.855 16.192.532c3.74-.84 7.841-.6 11.58.12 2.534.482 5.67 1.563 6.756 4.086 1.93 4.565-3.498 9.49-6.634 12.134 3.015.84 6.03 2.763 6.273 6.247 2.05-.24 4.22-.48 6.393-.48 0 .6.24 1.68 0 2.16-.12.362-.483.242-.965.242-.845 0-1.568.12-2.413.12-.844.12-1.69.12-2.533.24-.604.12-.604 0-.725.48 0 .36-.12.72-.12 1.082-.362 1.32-.845 2.523-1.448 3.604-2.774 5.406-7.84 9.49-13.27 12.374-3.136 1.682-6.634 3.244-10.374 3.244zm22.8-20.303c-6.273 1.08-12.667 2.523-18.698 4.445-3.378 1.08-7.6 2.763-9.53 5.887-1.448 2.282-.965 4.925 1.448 6.487 4.825 3.124 11.7-.84 15.802-3.484 4.825-3.004 9.65-7.57 10.978-13.335zm-15.2-7.81c-.482 0-7.962-.12-5.67 2.163.845.84 3.016.72 4.102.6 2.412-.12 4.825-1.44 6.876-2.642-1.81 0-3.497-.12-5.307-.12z"/><path id="m" d="M0 33.89c0-3.004.724-6.248 1.327-9.13 1.327-6.248 3.62-12.376 6.876-17.782.965-1.562 1.93-3.003 3.016-4.325.602-.72 2.652-3.844 3.618-2.162.12.24.362.962.362 1.322 0 .6-.845 1.202-1.327 1.682-1.207 1.322-2.292 2.643-3.257 4.085-3.62 5.165-5.91 11.172-7.48 17.3-.844 3.243-1.688 6.847-1.688 10.33"/><path id="n" d="M10.374 41.688c-.603-.36-1.085-.6-.24-1.682 3.015-4.325 15.32-21.865 17.732-26.55 1.568-3.004 1.69-6.128.482-8.17-1.206-1.922-3.498-2.883-6.876-2.883-7.84 0-17.37 9.37-19.3 11.293-.242.24-.483.36-.845.36H0C.483 13.456 11.58 0 21.472 0c5.308 0 7.72 2.163 8.927 4.085 1.688 2.763 1.567 6.848-.363 10.572-2.533 4.805-14.837 22.346-17.853 26.79-.603.722-1.207.602-1.81.24z"/><path id="o" d="M22.498 44.576c-.12.48-.482.72-.965.6-3.378-1.08-6.03-5.285-8.685-9.25-1.327-2.042-2.654-4.084-3.98-5.646-.242-.24-.604-.36-.966-.12-3.257 1.682-4.705 1.682-5.67 1.44-1.085-.36-1.93-1.32-2.17-2.522-.242-1.32.24-2.643 1.326-3.363.844-.6 2.654-1.322 5.79.12.483.24.845.48 1.327.72.24.12.603.24.844 0 2.17-1.44 5.066-3.483 9.047-6.487 5.79-4.565 13.15-16.82 14.837-19.703.242-.36.603-.48.965-.24l.844.48c.362.24.482.6.24.962-1.688 3.003-9.167 15.498-15.44 20.423-3.498 2.764-6.273 4.806-8.444 6.248-.362.24-.482.72-.12 1.08 1.327 1.563 2.533 3.485 3.86 5.407 2.412 3.604 4.825 7.45 7.358 8.29.362.12.483.48.483.84l-.482.72zM3.68 27.276c-.362 0-.724.12-.965.24-.362.24-.483.722-.362 1.082 0 .12.12.48.482.6s1.207.12 3.5-1.08c-.122-.12-.243-.12-.363-.24-.845-.36-1.568-.602-2.292-.602z"/><path id="p" d="M4.376 39.77c-.603 0-1.086-.12-1.568-.36-1.93-1.08-3.016-4.084-2.775-7.688C.275 29.438 1.6 21.99 10.65 18.866c3.135-1.082 6.513-1.923 10.132-2.403 1.085-2.042 2.292-4.205 3.377-6.247-3.5 3.123-7.6 5.766-10.134 4.445-.844-.48-1.326-1.202-1.568-2.043-.844-3.244 2.895-10.092 3.98-12.255.242-.36.604-.48.966-.24l.845.48c.36.24.48.6.24.962-1.086 2.042-4.222 8.53-3.74 10.332.12.36.242.48.483.6 1.568.84 7.48-3.845 12.063-8.77.362-.48 1.085-.48 1.568-.12l.482.36c.362.24.483.72.242 1.2-.965 1.803-3.378 6.368-5.91 11.054 4.462-.72 9.53-.48 14.113-.12 9.17.96 17.01 3.123 17.01 3.123l-.604 1.08c-.12.242-.36.362-.723.242-2.895-.722-19.18-4.206-31.244-1.803-1.81 3.363-3.5 6.367-4.464 7.81-3.98 6.246-9.29 13.214-13.39 13.214zm14.958-20.663c-2.774.48-5.428 1.2-7.96 2.042-7.6 2.642-8.807 8.89-8.928 10.812-.24 2.763.603 4.805 1.568 5.286 1.568.84 6.152-3.004 11.822-12.014.724-1.2 2.05-3.484 3.498-6.127z"/><path id="q" d="M6.758 6.746c-1.206-.72-2.292-1.682-3.377-2.643C2.658 3.503-.96 1.1.245.138 1.33-.702 3.5 2.54 3.984 3.262c.965 1.08 1.93 2.282 2.774 3.484-1.327-.72-.724-1.202 0 0z"/></defs></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!--Footer with open block field -->
+  <footer class="site-footer">
+    <squarespace:block-field id="footerBlocks" columns="12" />
+  </footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/ScrollMagic.min.js"></script>
+<script src="js/animation.gsap.min.js"></script>
+<script src="node_modules/aos/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
+<!-- combo and minify scripts when not logged in -->
+<squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+
+<!-- other scripts, and footer code injection -->
+{squarespace-footers}
+
+</body>
 </html>

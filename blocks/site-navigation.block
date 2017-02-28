@@ -1,23 +1,28 @@
-<nav class="site-navigation">
-  <ul class="site-navigation-list">
-    {.repeated section items}
+<!-- <nav class="site-navigation">
+  <ul class="site-navigation-list"> -->
+    <!-- {.repeated section items} -->
 
-      <li class="site-navigation-item {.section active} active-link{.end}">
+      <!-- <li class="site-navigation-item {.section active} active-link{.end}"> -->
 
         <!-- collection link -->
-        {.section collection}
+        <!-- {.section collection}
           <a href="{fullUrl}">{navigationTitle}</a>
-        {.end}
+        {.end} -->
 
         <!-- external link -->
-        {.section externalLink}
+        <!-- {.section externalLink}
           <a href="{url}"{.section newWindow} target="_blank"{.end}>
             {title}
           </a>
-        {.end}
+        {.end} -->
 
-      </li>
+      <!-- </li> -->
 
-    {.end}
-  </ul>
+    <!-- {.end} -->
+  <!-- </ul> -->
+<!-- </nav> -->
+
+<nav>
+    <a href="javascript:void(0);" class="js_menu">menu</a>
+    <a href="javascript:void(0);" class="js_location">contact</a>
 </nav>
