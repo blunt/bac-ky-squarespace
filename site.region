@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
   <script src="https://use.typekit.net/gdl4vqh.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -35,7 +34,9 @@
         <span>Homestyle, family-run restaurant</span>
       </h2>
       <div class="column large--8 medium--4 about-meta">
-        <p>Located in Toronto's trendy King West neighborhood</p>
+        {.section intro}
+        <p>{ title }</p>
+        {.end}
         <svg width="29" height="28" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
           <title>Vector</title>
           <desc>Created using Figma</desc>
@@ -64,10 +65,10 @@
     </div>
     <div class="column large--6 no-gutter image-column">
       <div class="column large--16 offset--2 medium--6 medium-offset--3 small--4 small-offset--2 image-1">
-        <img src="{fullUrl}/img/fresh-rolls.jpg" alt="">
+        <img src="{fullUrl}/assets/img/fresh-rolls.jpg" alt="">
       </div>
       <div class="column large--16 medium--6 small--4 image-2">
-        <img src="{fullUrl}/img/spring-rolls.jpg" alt="">
+        <img src="{fullUrl}/assets/img/spring-rolls.jpg" alt="">
       </div>
     </div>
     <div class="section column large--12 no-gutter">
@@ -136,10 +137,10 @@
     </div>
     <div class="column large--6 no-gutter image-column">
       <div class="column large--16 offset--1 medium--6 image-3 small--4">
-        <img src="img/image-2.jpg" alt="">
+        <img src="{fullUrl}/assets/img/image-2.jpg" alt="">
       </div>
       <div class="column large--16 offset--2 medium--6 medium-offset--3 small--4 small-offset--2 image-4">
-        <img src="img/image.jpg" alt="">
+        <img src="{fullUrl}/assets/img/image.jpg" alt="">
       </div>
     </div>
     <div class="section column large--12 no-gutter">
@@ -212,7 +213,7 @@
     </div>
     <div class="column large--6 no-gutter image-column last-image">
       <div class="column large--14 offset--1 image-5">
-        <img src="img/backy.jpg" alt="">
+        <img src="{fullUrl}/assets/img/backy.jpg" alt="">
       </div>
     </div>
     <div class="section column large--12 offset--6 no-gutter">
@@ -519,15 +520,12 @@
 
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/ScrollMagic.min.js"></script>
-<script src="js/animation.gsap.min.js"></script>
-<script src="node_modules/aos/dist/aos.js"></script>
-<script src="js/main.js"></script>
-
-<!-- combo and minify scripts when not logged in -->
-<squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+<squarespace:script src="jquery-3.1.1.min.js" />
+<squarespace:script src="TweenMax.min.js" />
+<squarespace:script src="ScrollMagic.min.js" />
+<squarespace:script src="animation.gsap.min.js" />
+<squarespace:script src="aos.js" />
+<squarespace:script src="main.js" />
 
 <!-- other scripts, and footer code injection -->
 {squarespace-footers}
