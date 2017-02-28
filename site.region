@@ -37,6 +37,7 @@
         {.section intro}
         <p>{ title }</p>
         {.end}
+        <squarespace:block-field id="intro" />
         <svg width="29" height="28" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
           <title>Vector</title>
           <desc>Created using Figma</desc>
