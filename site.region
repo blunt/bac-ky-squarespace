@@ -69,27 +69,13 @@
         <h4 class="inner-section-heading hug">Fresh Rolls & Spring Rolls</h4>
       </div>
       <div class="column large--9 medium-half--1 menu-inner-section">
-        <ul class="menu-items">
+        <div class="menu-items">
           <squarespace:block-field id="menu-item"/>
-          <li class="menu-item">
-            <strong>Pork fresh rolls</strong>
-            <span>$5</span>
-            <p class="hug">Grilled pork, vermicelli, lettuce brean sprouts, cucumber, carrots, mint leaves, wrapped with rice paper</p>
-          </li>
-          <li class="menu-item">
-            <strong>Shrimp fresh rolls</strong>
-            <span>$5</span>
-            <p class="hug">Shrimp, rice paper, vermicelli, lettuce, bean sprouts, cucumber, carrots, and mint leaves</p>
-          </li>
-          <li class="menu-item">
-            <strong>Avocado fresh rolls</strong>
-            <span>$10.80</span>
-            <p class="hug">Avocado, rice paper, vermicelli, lettuce, bean sprouts, cucumber, carrots, and mint leaves</p>
-          </li>
-        </ul>
+        </div>
       </div>
       <div class="column large--9 medium-half--1 menu-inner-section">
-        <ul class="menu-items">
+        <div class="menu-items">
+          <squarespace:block-field id="menu-item-2"/>
           <li class="menu-item">
             <strong>Homestyle spring rolls</strong>
             <span>$4.50</span>
@@ -100,7 +86,7 @@
             <span>$4.50</span>
             <p class="hug">Cabbage, jicama, taro, onions, and mung bean noodles</p>
           </li>
-        </ul>
+        </div>
       </div>
     </div>
     <div class="section column large--12 offset--6 no-gutter">
@@ -108,21 +94,23 @@
         <h4 class="inner-section-heading hug">Salads</h4>
       </div>
       <div class="column large--9 medium-half--1">
-        <ul class="menu-items">
+        <div class="menu-items">
+          <squarespace:block-field id="menu-item-3"/>
           <li class="menu-item">
             <strong>House special salad slaw</strong>
             <span>$6</span>
             <p class="hug">Cabbage, shredded carrots, sweet onions, daikon, lime juice, fried onions, shrimp chips, basil, and mint leaves</p>
           </li>
-        </ul>
+        </div>
       </div>
       <div class="column large--9 medium-half--1">
         <ul class="menu-items">
-          <li class="menu-item">
+          <div class="menu-item">
+            <squarespace:block-field id="menu-item-4"/>
             <strong>Mango Salad</strong>
             <span>$6</span>
             <p class="hug">Fresh mango, peppers, shrimp chips, and peanuts</p>
-          </li>
+          </div>
         </ul>
       </div>
     </div>
@@ -140,7 +128,8 @@
     <div class="section column large--12 no-gutter">
       <div class="section column large--9 medium-half--1 menu-inner-section">
         <h4 class="inner-section-heading hug">Bun - Vermicelli</h4>
-        <ul class="menu-items">
+        <div class="menu-items">
+          <squarespace:block-field id="menu-item-2"/>
           <li class="menu-item">
             <strong>Bun rieu</strong>
             <span>$8.80</span>
@@ -156,11 +145,12 @@
             <span>$10.80</span>
             <p class="hug">Vermicelli noodles, vegetarian spring roll, mixed vegetables, deep fried tofu, pickled carrots/daikon, and a side of fish sauce. (Vegan fish sauce available)</p>
           </li>
-        </ul>
+        </div>
       </div>
       <div class="column large--9  medium-half--1 menu-inner-section">
         <h4 class="inner-section-heading hug">Pho' Rice Noodles</h4>
-        <ul class="menu-items">
+        <div class="menu-items">
+          <squarespace:block-field id="menu-item-2"/>
           <li class="menu-item">
             <strong>Pho' tai nam bo vien</strong>
             <span>sm $7.00 lg $9.90</span>
@@ -176,7 +166,7 @@
             <span>sm $7.00 lg $9.90</span>
             <p class="hug">Rice noodles, mushroom broth, and a variety of vegetables</p>
           </li>
-        </ul>
+        </div>
       </div>
     </div>
     <div class="section column large--12 offset--6 no-gutter">
@@ -184,22 +174,24 @@
         <h4 class="inner-section-heading hug">Co’m dac biet – Rice</h4>
       </div>
       <div class="column large--9 medium-half--1">
-        <ul class="menu-items">
+        <div class="menu-items">
+          <squarespace:block-field id="menu-item-2"/>
           <li class="menu-item no-min">
             <strong>Rice with pork chop, fried egg, and house salad</strong>
             <span>$10.80</span>
             <p class="hug">(Can substitute with chicken or beef)</p>
           </li>
-        </ul>
+        </div>
       </div>
       <div class="column large--9 medium-half--1">
-        <ul class="menu-items">
+        <div class="menu-items">
+          <squarespace:block-field id="menu-item-2"/>
           <li class="menu-item no-min">
             <strong>Rice with mixed vegetables, fried egg and house salad</strong>
             <span>$10.80</span>
             <p class="hug">Broccoli, cauliflower, bok choy, mushroom, and tofu</p>
           </li>
-        </ul>
+        </div>
       </div>
     </div>
     <div class="column large--12 offset--6 menu-heading drinks">
