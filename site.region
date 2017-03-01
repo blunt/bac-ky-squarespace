@@ -129,7 +129,7 @@
       <div class="section column large--9 medium-half--1 menu-inner-section">
         <h4 class="inner-section-heading hug">Bun - Vermicelli</h4>
         <div class="menu-items">
-          <squarespace:block-field id="menu-item-2"/>
+          <squarespace:block-field id="menu-item-5"/>
           <li class="menu-item">
             <strong>Bun rieu</strong>
             <span>$8.80</span>
@@ -150,7 +150,7 @@
       <div class="column large--9  medium-half--1 menu-inner-section">
         <h4 class="inner-section-heading hug">Pho' Rice Noodles</h4>
         <div class="menu-items">
-          <squarespace:block-field id="menu-item-2"/>
+          <squarespace:block-field id="menu-item-6"/>
           <li class="menu-item">
             <strong>Pho' tai nam bo vien</strong>
             <span>sm $7.00 lg $9.90</span>
@@ -175,7 +175,7 @@
       </div>
       <div class="column large--9 medium-half--1">
         <div class="menu-items">
-          <squarespace:block-field id="menu-item-2"/>
+          <squarespace:block-field id="menu-item-7"/>
           <li class="menu-item no-min">
             <strong>Rice with pork chop, fried egg, and house salad</strong>
             <span>$10.80</span>
@@ -185,7 +185,7 @@
       </div>
       <div class="column large--9 medium-half--1">
         <div class="menu-items">
-          <squarespace:block-field id="menu-item-2"/>
+          <squarespace:block-field id="menu-item-8"/>
           <li class="menu-item no-min">
             <strong>Rice with mixed vegetables, fried egg and house salad</strong>
             <span>$10.80</span>
