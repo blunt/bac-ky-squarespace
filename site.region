@@ -47,11 +47,6 @@
           </defs>
         </svg>
         <squarespace:block-field id="hours" lock-layout="true"/>
-        <ul class="about-hours">
-          <li><strong>M - F</strong> – 11AM to 10PM</li>
-          <li><strong>Sat</strong> – 12PM to 10PM</li>
-          <li><strong>Sun</strong> – 12PM to 7PM</li>
-        </ul>
       </div>
     </div>
   </section>
