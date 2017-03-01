@@ -375,7 +375,7 @@
             center: backy,
             disableDefaultUI: true
           });
-          var image = new google.maps.MarkerImage('img/star.svg',
+          var image = new google.maps.MarkerImage('assets/img/star.svg',
           new google.maps.Size(49, 47),
           new google.maps.Point(0, 0),
           new google.maps.Point(24.5, 23.5));
