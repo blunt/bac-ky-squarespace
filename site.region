@@ -76,16 +76,6 @@
       <div class="column large--9 medium-half--1 menu-inner-section">
         <div class="menu-items">
           <squarespace:block-field id="menu-item-2"/>
-          <li class="menu-item">
-            <strong>Homestyle spring rolls</strong>
-            <span>$4.50</span>
-            <p class="hug">Pork, taro, jicama, onion, and mung bean noodles</p>
-          </li>
-          <li class="menu-item">
-            <strong>Vegetarian spring rolls</strong>
-            <span>$4.50</span>
-            <p class="hug">Cabbage, jicama, taro, onions, and mung bean noodles</p>
-          </li>
         </div>
       </div>
     </div>
@@ -96,20 +86,12 @@
       <div class="column large--9 medium-half--1">
         <div class="menu-items">
           <squarespace:block-field id="menu-item-3"/>
-          <li class="menu-item">
-            <strong>House special salad slaw</strong>
-            <span>$6</span>
-            <p class="hug">Cabbage, shredded carrots, sweet onions, daikon, lime juice, fried onions, shrimp chips, basil, and mint leaves</p>
-          </li>
         </div>
       </div>
       <div class="column large--9 medium-half--1">
         <ul class="menu-items">
           <div class="menu-item">
             <squarespace:block-field id="menu-item-4"/>
-            <strong>Mango Salad</strong>
-            <span>$6</span>
-            <p class="hug">Fresh mango, peppers, shrimp chips, and peanuts</p>
           </div>
         </ul>
       </div>
@@ -130,42 +112,12 @@
         <h4 class="inner-section-heading hug">Bun - Vermicelli</h4>
         <div class="menu-items">
           <squarespace:block-field id="menu-item-5"/>
-          <li class="menu-item">
-            <strong>Bun rieu</strong>
-            <span>$8.80</span>
-            <p class="hug">Vermicelli noodles, chicken soup broth, fresh tomatoes, dried tofu, crab meat balls made with ground pork, egg, and crab paste</p>
-          </li>
-          <li class="menu-item">
-            <strong>Bun with pork slice</strong>
-            <span>$10.80</span>
-            <p class="hug">Vermicelli noodles, spring rools, pickled carrots/daikon, salad, and a side of fish sauce (Can subsitute with checken or beef)</p>
-          </li>
-          <li class="menu-item">
-            <strong>Bun with mixed vegetables and tofu</strong>
-            <span>$10.80</span>
-            <p class="hug">Vermicelli noodles, vegetarian spring roll, mixed vegetables, deep fried tofu, pickled carrots/daikon, and a side of fish sauce. (Vegan fish sauce available)</p>
-          </li>
         </div>
       </div>
       <div class="column large--9  medium-half--1 menu-inner-section">
         <h4 class="inner-section-heading hug">Pho' Rice Noodles</h4>
         <div class="menu-items">
           <squarespace:block-field id="menu-item-6"/>
-          <li class="menu-item">
-            <strong>Pho' tai nam bo vien</strong>
-            <span>sm $7.00 lg $9.90</span>
-            <p class="hug">Rice noodle soup with rare beef, beef flank, and beef balls</p>
-          </li>
-          <li class="menu-item">
-            <strong>Pho' ga</strong>
-            <span>sm $7.00 lg $9.90</span>
-            <p class="hug">Rice noodle soup with chicken slices and chicken broth</p>
-          </li>
-          <li class="menu-item">
-            <strong>Pho' vegetarian</strong>
-            <span>sm $7.00 lg $9.90</span>
-            <p class="hug">Rice noodles, mushroom broth, and a variety of vegetables</p>
-          </li>
         </div>
       </div>
     </div>
@@ -176,21 +128,11 @@
       <div class="column large--9 medium-half--1">
         <div class="menu-items">
           <squarespace:block-field id="menu-item-7"/>
-          <li class="menu-item no-min">
-            <strong>Rice with pork chop, fried egg, and house salad</strong>
-            <span>$10.80</span>
-            <p class="hug">(Can substitute with chicken or beef)</p>
-          </li>
         </div>
       </div>
       <div class="column large--9 medium-half--1">
         <div class="menu-items">
           <squarespace:block-field id="menu-item-8"/>
-          <li class="menu-item no-min">
-            <strong>Rice with mixed vegetables, fried egg and house salad</strong>
-            <span>$10.80</span>
-            <p class="hug">Broccoli, cauliflower, bok choy, mushroom, and tofu</p>
-          </li>
         </div>
       </div>
     </div>
@@ -204,7 +146,8 @@
     </div>
     <div class="section column large--12 offset--6 no-gutter">
       <div class="column large--9 medium-half--1">
-        <ul class="menu-items hug">
+        <div class="menu-items hug">
+          <squarespace:block-field id="menu-item-9"/>
           <li class="menu-item hug">
             <strong>Coconut Water</strong>
             <span>$3.20</span>
@@ -225,7 +168,7 @@
             <strong>Vietnamese jackfruit shake</strong>
             <span>$2.20</span>
           </li>
-        </ul>
+        </div>
       </div>
       <div class="column large--9 medium-half--1">
         <ul class="menu-items hug">
