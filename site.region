@@ -64,36 +64,38 @@
         <img src="{fullUrl}/assets/img/spring-rolls.jpg" alt="">
       </div>
     </div>
-    <div class="section column large--12 no-gutter">
-      <div class="column menu-inner-section">
-        <h4 class="inner-section-heading hug">Fresh Rolls & Spring Rolls</h4>
-      </div>
-      <div class="column large--9 medium-half--1 menu-inner-section">
-        <div class="menu-items">
-          <squarespace:block-field id="menu-item"/>
+    <div class="column large--12 no-gutter">
+      <div class="section column no-gutter">
+        <div class="column menu-inner-section">
+          <h4 class="inner-section-heading hug">Fresh Rolls & Spring Rolls</h4>
         </div>
-      </div>
-      <div class="column large--9 medium-half--1 menu-inner-section">
-        <div class="menu-items">
-          <squarespace:block-field id="menu-item-2"/>
-        </div>
-      </div>
-    </div>
-    <div class="section column large--12 offset--6 no-gutter">
-      <div class="column menu-inner-section">
-        <h4 class="inner-section-heading hug">Salads</h4>
-      </div>
-      <div class="column large--9 medium-half--1">
-        <div class="menu-items">
-          <squarespace:block-field id="menu-item-3"/>
-        </div>
-      </div>
-      <div class="column large--9 medium-half--1">
-        <ul class="menu-items">
-          <div class="menu-item">
-            <squarespace:block-field id="menu-item-4"/>
+        <div class="column large--9 medium-half--1 menu-inner-section">
+          <div class="menu-items">
+            <squarespace:block-field id="menu-item"/>
           </div>
-        </ul>
+        </div>
+        <div class="column large--9 medium-half--1 menu-inner-section">
+          <div class="menu-items">
+            <squarespace:block-field id="menu-item-2"/>
+          </div>
+        </div>
+      </div>
+      <div class="section column no-gutter">
+        <div class="column menu-inner-section">
+          <h4 class="inner-section-heading hug">Salads</h4>
+        </div>
+        <div class="column large--9 medium-half--1">
+          <div class="menu-items">
+            <squarespace:block-field id="menu-item-3"/>
+          </div>
+        </div>
+        <div class="column large--9 medium-half--1">
+          <ul class="menu-items">
+            <div class="menu-item">
+              <squarespace:block-field id="menu-item-4"/>
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="column large--12 offset--6 menu-heading mains">
@@ -108,31 +110,33 @@
       </div>
     </div>
     <div class="section column large--12 no-gutter">
-      <div class="section column large--9 medium-half--1 menu-inner-section">
-        <h4 class="inner-section-heading hug">Bun - Vermicelli</h4>
-        <div class="menu-items">
-          <squarespace:block-field id="menu-item-5"/>
+      <div class="section column no-gutter">
+        <div class="section column large--9 medium-half--1 menu-inner-section">
+          <h4 class="inner-section-heading hug">Bun - Vermicelli</h4>
+          <div class="menu-items">
+            <squarespace:block-field id="menu-item-5"/>
+          </div>
+        </div>
+        <div class="column large--9  medium-half--1 menu-inner-section">
+          <h4 class="inner-section-heading hug">Pho' Rice Noodles</h4>
+          <div class="menu-items">
+            <squarespace:block-field id="menu-item-6"/>
+          </div>
         </div>
       </div>
-      <div class="column large--9  medium-half--1 menu-inner-section">
-        <h4 class="inner-section-heading hug">Pho' Rice Noodles</h4>
-        <div class="menu-items">
-          <squarespace:block-field id="menu-item-6"/>
+      <div class="column no-gutter">
+        <div class="column menu-inner-section">
+          <h4 class="inner-section-heading hug">Co’m dac biet – Rice</h4>
         </div>
-      </div>
-    </div>
-    <div class="section column large--12 offset--6 no-gutter">
-      <div class="column menu-inner-section">
-        <h4 class="inner-section-heading hug">Co’m dac biet – Rice</h4>
-      </div>
-      <div class="column large--9 medium-half--1">
-        <div class="menu-items">
-          <squarespace:block-field id="menu-item-7"/>
+        <div class="column large--9 medium-half--1">
+          <div class="menu-items">
+            <squarespace:block-field id="menu-item-7"/>
+          </div>
         </div>
-      </div>
-      <div class="column large--9 medium-half--1">
-        <div class="menu-items">
-          <squarespace:block-field id="menu-item-8"/>
+        <div class="column large--9 medium-half--1">
+          <div class="menu-items">
+            <squarespace:block-field id="menu-item-8"/>
+          </div>
         </div>
       </div>
     </div>
@@ -146,12 +150,12 @@
     </div>
     <div class="section column large--12 offset--6 no-gutter">
       <div class="column large--9 medium-half--1">
-        <div class="menu-items hug">
+        <div class="menu-items hug drinks">
           <squarespace:block-field id="menu-item-9"/>
         </div>
       </div>
       <div class="column large--9 medium-half--1">
-        <div class="menu-items hug">
+        <div class="menu-items hug drinks">
           <squarespace:block-field id="menu-item-10"/>
         </div>
       </div>
@@ -398,11 +402,6 @@
         </a>
       </div>
     </div>
-  </footer>
-
-  <!--Footer with open block field -->
-  <footer class="site-footer">
-    <squarespace:block-field id="footerBlocks" columns="12" />
   </footer>
 
 </div>

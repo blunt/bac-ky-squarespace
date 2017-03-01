@@ -1175,6 +1175,11 @@ body {
   content: "";
 }
 
+@media (min-width: 640px) {
+  .menu-section-heading {
+    margin-top: 1.5em;
+  }
+}
 @media (min-width: 960px) {
 
   .menu-section-heading {
@@ -1194,10 +1199,14 @@ body {
     margin-bottom: 2em
 }
 
+.drinks .menu-item:not(:first-child) {
+  margin-top: 0!important;
+}
+
 @media (min-width: 640px) {
 
   .section {
-    margin-bottom: 0;
+    // margin-bottom: 0;
   }
     }
 
@@ -1406,6 +1415,10 @@ footer:after {
 
 .address {
     margin-bottom: 2em
+}
+
+#address p:not(:first-child) {
+  margin-top: 0!important;
 }
 
 @media (min-width: 960px) {
