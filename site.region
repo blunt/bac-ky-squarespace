@@ -33,7 +33,7 @@
         <span>Homestyle, family-run restaurant</span>
       </h2>
       <div class="column large--8 medium--4 about-meta" data-content-field="intro">
-        <squarespace:block-field id="intro" lock-layout="true"/>
+        <squarespace:block-field id="located" lock-layout="true"/>
         <svg width="29" height="28" viewBox="0 0 29 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
           <title>Vector</title>
           <desc>Created using Figma</desc>
