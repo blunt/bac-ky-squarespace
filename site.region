@@ -148,47 +148,12 @@
       <div class="column large--9 medium-half--1">
         <div class="menu-items hug">
           <squarespace:block-field id="menu-item-9"/>
-          <li class="menu-item hug">
-            <strong>Coconut Water</strong>
-            <span>$3.20</span>
-          </li>
-          <li class="menu-item hug">
-            <strong>Mango Juice</strong>
-            <span>$3.20</span>
-          </li>
-          <li class="menu-item hug">
-            <strong>Sparkling Water</strong>
-            <span>$2.20</span>
-          </li>
-          <li class="menu-item hug">
-            <strong>Tea (green tea or earl grey)</strong>
-            <span>$3.20</span>
-          </li>
-          <li class="menu-item hug">
-            <strong>Vietnamese jackfruit shake</strong>
-            <span>$2.20</span>
-          </li>
         </div>
       </div>
       <div class="column large--9 medium-half--1">
-        <ul class="menu-items hug">
-          <li class="menu-item hug">
-            <strong>Natural Spring Water</strong>
-            <span>$1.50</span>
-          </li>
-          <li class="menu-item hug">
-            <strong>Coke / Diet Coke</strong>
-            <span>$1.50</span>
-          </li>
-          <li class="menu-item hug">
-            <strong>Vietnamese coffee (hot or iced)</strong>
-            <span>$3.20</span>
-          </li>
-          <li class="menu-item hug">
-            <strong>Vietnamese avacado shake</strong>
-            <span>$1.50</span>
-          </li>
-        </ul>
+        <div class="menu-items hug">
+          <squarespace:block-field id="menu-item-10"/>
+        </div>
       </div>
     </div>
   </section>
