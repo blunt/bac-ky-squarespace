@@ -71,12 +71,12 @@
         </div>
         <div class="column large--9 medium-half--1 menu-inner-section">
           <div class="menu-items">
-            <squarespace:block-field id="menu-item"/>
+            <squarespace:block-field id="menu-item" lock-layout="true"/>
           </div>
         </div>
         <div class="column large--9 medium-half--1 menu-inner-section">
           <div class="menu-items">
-            <squarespace:block-field id="menu-item-2"/>
+            <squarespace:block-field id="menu-item-2" lock-layout="true"/>
           </div>
         </div>
       </div>
@@ -86,13 +86,13 @@
         </div>
         <div class="column large--9 medium-half--1">
           <div class="menu-items">
-            <squarespace:block-field id="menu-item-3"/>
+            <squarespace:block-field id="menu-item-3" lock-layout="true"/>
           </div>
         </div>
         <div class="column large--9 medium-half--1">
           <ul class="menu-items">
             <div class="menu-item">
-              <squarespace:block-field id="menu-item-4"/>
+              <squarespace:block-field id="menu-item-4" lock-layout="true"/>
             </div>
           </ul>
         </div>
@@ -114,13 +114,13 @@
         <div class="section column large--9 medium-half--1 menu-inner-section">
           <h4 class="inner-section-heading hug">Bun - Vermicelli</h4>
           <div class="menu-items">
-            <squarespace:block-field id="menu-item-5"/>
+            <squarespace:block-field id="menu-item-5" lock-layout="true"/>
           </div>
         </div>
         <div class="column large--9  medium-half--1 menu-inner-section">
           <h4 class="inner-section-heading hug">Pho' Rice Noodles</h4>
           <div class="menu-items">
-            <squarespace:block-field id="menu-item-6"/>
+            <squarespace:block-field id="menu-item-6" lock-layout="true"/>
           </div>
         </div>
       </div>
@@ -130,12 +130,12 @@
         </div>
         <div class="column large--9 medium-half--1">
           <div class="menu-items">
-            <squarespace:block-field id="menu-item-7"/>
+            <squarespace:block-field id="menu-item-7" lock-layout="true"/>
           </div>
         </div>
         <div class="column large--9 medium-half--1">
           <div class="menu-items">
-            <squarespace:block-field id="menu-item-8"/>
+            <squarespace:block-field id="menu-item-8" lock-layout="true"/>
           </div>
         </div>
       </div>
@@ -151,12 +151,12 @@
     <div class="section column large--12 offset--6 no-gutter">
       <div class="column large--9 medium-half--1">
         <div class="menu-items hug drinks">
-          <squarespace:block-field id="menu-item-9"/>
+          <squarespace:block-field id="menu-item-9" lock-layout="true"/>
         </div>
       </div>
       <div class="column large--9 medium-half--1">
         <div class="menu-items hug drinks">
-          <squarespace:block-field id="menu-item-10"/>
+          <squarespace:block-field id="menu-item-10" lock-layout="true"/>
         </div>
       </div>
     </div>
