@@ -70,7 +70,7 @@
       </div>
       <div class="column large--9 medium-half--1 menu-inner-section">
         <ul class="menu-items">
-          <squarespace:block-field id="menu-item" lock-layout="true"/>
+          <squarespace:block-field id="menu-item"/>
           <li class="menu-item">
             <strong>Pork fresh rolls</strong>
             <span>$5</span>
